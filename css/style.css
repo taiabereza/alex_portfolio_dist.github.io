@@ -744,8 +744,7 @@ h6 {
           align-items: center;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  padding-top: 5rem;
-  padding-bottom: 1.875rem;
+  padding-bottom: 5rem;
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem;
@@ -845,7 +844,7 @@ h6 {
   min-height: 100%;
   -ms-grid-rows: 0.5fr auto;
   grid-template-rows: 0.5fr auto;
-  padding-bottom: 1.875rem;
+  padding-bottom: 5rem;
 }
 
 .services__cards {
@@ -872,7 +871,7 @@ h6 {
   -ms-grid-rows: max-content auto;
   grid-template-rows: -webkit-max-content auto;
   grid-template-rows: max-content auto;
-  padding-bottom: 1.875rem;
+  padding-bottom: 5rem;
   gap: 1.25rem;
 }
 
@@ -945,7 +944,7 @@ h6 {
   -ms-grid-rows: max-content auto;
   grid-template-rows: -webkit-max-content auto;
   grid-template-rows: max-content auto;
-  padding-bottom: 1.875rem;
+  padding-bottom: 5rem;
   gap: 1.25rem;
 }
 
@@ -974,7 +973,7 @@ h6 {
   -ms-grid-rows: max-content auto;
   grid-template-rows: -webkit-max-content auto;
   grid-template-rows: max-content auto;
-  padding-bottom: 1.875rem;
+  padding-bottom: 5rem;
   gap: 3.75rem;
 }
 
@@ -997,7 +996,7 @@ h6 {
 
 .career__container {
   min-height: 100%;
-  padding-bottom: 1.875rem;
+  padding-bottom: 5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
@@ -1151,7 +1150,7 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 1.875rem;
+  padding-bottom: 5rem;
 }
 
 .skills__body {
@@ -1474,6 +1473,10 @@ textarea.form-contacts__input {
     gap: 1.5rem;
   }
 
+  .about__container {
+    padding-top: 5rem;
+  }
+
   .about__descr {
     margin-top: 2rem;
   }
@@ -1580,6 +1583,10 @@ textarea.form-contacts__input {
 
   .footer__container {
     gap: 1rem;
+  }
+
+  .about__container {
+    padding-top: 3.75rem;
   }
 
   .about__descr {
@@ -1905,18 +1912,9 @@ textarea.form-contacts__input {
   }
 
   .about__container {
-    padding-top: 6.25rem;
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     row-gap: 1.875rem;
-  }
-
-  .services__container {
-    padding-top: 8.125rem;
-  }
-
-  .works__container {
-    padding-top: 8.125rem;
   }
 
   .works__header {
@@ -1932,19 +1930,11 @@ textarea.form-contacts__input {
             justify-content: flex-start;
   }
 
-  .blog__container {
-    padding-top: 8.125rem;
-  }
-
   .blog__articles {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .clients__container {
-    padding-top: 8.125rem;
   }
 
   .clients__cards {
@@ -1958,20 +1948,11 @@ textarea.form-contacts__input {
     gap: 4.25rem;
   }
 
-  .career__container {
-    padding-top: 8.125rem;
-  }
-
   .nav-career__title {
     border: 1px solid #cfd2d4;
   }
 
-  .skills__container {
-    padding-top: 8.125rem;
-  }
-
   .contacts__container {
-    padding-top: 8.125rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -2121,6 +2102,18 @@ textarea.form-contacts__input {
 @supports not (gap: clamp( 1rem , 0.8241758242rem  +  0.8791208791vw , 1.5rem )) {
     .footer__container {
       gap: calc(1rem + 0.5 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-top: clamp( 3.75rem , 3.3104395604rem  +  2.1978021978vw , 5rem )) {
+    .about__container {
+      padding-top: clamp( 3.75rem , 3.3104395604rem  +  2.1978021978vw , 5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 3.75rem , 3.3104395604rem  +  2.1978021978vw , 5rem )) {
+    .about__container {
+      padding-top: calc(3.75rem + 1.25 * (100vw - 20rem) / 56.875);
     }
 }
 
