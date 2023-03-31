@@ -626,6 +626,7 @@ h6 {
 
 .bottom__container {
   max-width: 100%;
+  min-height: 100%;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -737,7 +738,7 @@ h6 {
 .about__container {
   display: -ms-grid;
   display: grid;
-  min-height: 100vh;
+  min-height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -840,7 +841,7 @@ h6 {
       -ms-flex-align: start;
           align-items: flex-start;
   justify-items: center;
-  min-height: 100vh;
+  min-height: 100%;
   -ms-grid-rows: 0.5fr auto;
   grid-template-rows: 0.5fr auto;
   padding-bottom: 1.875rem;
@@ -865,7 +866,7 @@ h6 {
 .works__container {
   display: -ms-grid;
   display: grid;
-  min-height: 100vh;
+  min-height: 100%;
   -ms-grid-rows: -webkit-max-content auto;
   -ms-grid-rows: max-content auto;
   grid-template-rows: -webkit-max-content auto;
@@ -938,7 +939,7 @@ h6 {
       -ms-flex-align: start;
           align-items: flex-start;
   justify-items: center;
-  min-height: 100vh;
+  min-height: 100%;
   -ms-grid-rows: -webkit-max-content auto;
   -ms-grid-rows: max-content auto;
   grid-template-rows: -webkit-max-content auto;
@@ -967,7 +968,7 @@ h6 {
 .clients__container {
   display: -ms-grid;
   display: grid;
-  min-height: 100vh;
+  min-height: 100%;
   -ms-grid-rows: -webkit-max-content auto;
   -ms-grid-rows: max-content auto;
   grid-template-rows: -webkit-max-content auto;
@@ -994,7 +995,7 @@ h6 {
 }
 
 .career__container {
-  min-height: 100vh;
+  min-height: 100%;
   padding-bottom: 1.875rem;
   display: -ms-grid;
   display: grid;
@@ -1141,7 +1142,7 @@ h6 {
 }
 
 .skills__container {
-  height: 100vh;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1260,7 +1261,7 @@ h6 {
 }
 
 .contacts__container {
-  height: 100vh;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1270,7 +1271,6 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 1.875rem;
   gap: 2.5rem;
 }
 
@@ -1542,7 +1542,11 @@ textarea.form-contacts__input {
   }
 
   .contacts__container {
-    padding-top: 5rem;
+    padding-top: 10rem;
+  }
+
+  .contacts__container {
+    padding-bottom: 8.75rem;
   }
 }
 
@@ -1588,7 +1592,11 @@ textarea.form-contacts__input {
   }
 
   .contacts__container {
-    padding-top: 3.75rem;
+    padding-top: 5rem;
+  }
+
+  .contacts__container {
+    padding-bottom: 3.75rem;
   }
 }
 
@@ -1941,7 +1949,6 @@ textarea.form-contacts__input {
   }
 
   .contacts__container {
-    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -2292,15 +2299,27 @@ textarea.form-contacts__input {
     }
 }
 
-@supports (padding-top: clamp( 3.75rem , 1.5277777778rem  +  4.6296296296vw , 5rem )) {
+@supports (padding-top: clamp( 5rem , -3.8888888889rem  +  18.5185185185vw , 10rem )) {
     .contacts__container {
-      padding-top: clamp( 3.75rem , 1.5277777778rem  +  4.6296296296vw , 5rem );
+      padding-top: clamp( 5rem , -3.8888888889rem  +  18.5185185185vw , 10rem );
     }
 }
 
-@supports not (padding-top: clamp( 3.75rem , 1.5277777778rem  +  4.6296296296vw , 5rem )) {
+@supports not (padding-top: clamp( 5rem , -3.8888888889rem  +  18.5185185185vw , 10rem )) {
     .contacts__container {
-      padding-top: calc(3.75rem + 1.25 * (100vw - 48rem) / 27);
+      padding-top: calc(5rem + 5 * (100vw - 48rem) / 27);
+    }
+}
+
+@supports (padding-bottom: clamp( 3.75rem , -5.1388888889rem  +  18.5185185185vw , 8.75rem )) {
+    .contacts__container {
+      padding-bottom: clamp( 3.75rem , -5.1388888889rem  +  18.5185185185vw , 8.75rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 3.75rem , -5.1388888889rem  +  18.5185185185vw , 8.75rem )) {
+    .contacts__container {
+      padding-bottom: calc(3.75rem + 5 * (100vw - 48rem) / 27);
     }
 }
 }
